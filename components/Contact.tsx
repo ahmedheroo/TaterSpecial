@@ -10,7 +10,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ language }) => {
   const t = useTranslations(language);
-  const phoneNumbers = ["+966593883279", "+966544365475"];
+  const phoneNumbers = ["0593883279", "0544365475"];
 
   return (
     <section id="contact" className="py-20 bg-gray-800">
