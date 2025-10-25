@@ -7,6 +7,7 @@ import Products from './components/Products';
 import Oils from './components/Oils';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
 
 function App() {
   const [language, setLanguage] = useState<Language>('ar');
@@ -14,8 +15,8 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = language;
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-    document.body.style.fontFamily = language === 'ar' 
-      ? "'Tajawal', sans-serif" 
+    document.body.style.fontFamily = language === 'ar'
+      ? "'Tajawal', sans-serif"
       : "'Montserrat', sans-serif";
   }, [language]);
 
@@ -24,6 +25,7 @@ function App() {
       <Header language={language} setLanguage={setLanguage} />
       <main>
         <Hero language={language} />
+        <AboutUs language={language} />
         <Products language={language} />
         <Oils language={language} />
         <Contact language={language} />

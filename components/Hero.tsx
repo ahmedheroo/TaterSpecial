@@ -1,33 +1,68 @@
-
 import React from 'react';
 import type { Language } from '../types';
 import { useTranslations } from '../hooks/useTranslations';
+import { ServiceIcon, PriceIcon, QualityIcon, SprayIcon, DiffuserIcon, OilBottleIcon } from './Icons';
 
 interface HeroProps {
   language: Language;
 }
 
+const iconMap: { [key: string]: React.FC } = {
+  ServiceIcon,
+  PriceIcon,
+  QualityIcon,
+  SprayIcon,
+  DiffuserIcon,
+  OilBottleIcon,
+};
+
 const Hero: React.FC<HeroProps> = ({ language }) => {
   const t = useTranslations(language);
 
+  const features = language === 'en' ? [...t.hero.features].reverse() : t.hero.features;
+
   return (
     <section 
-      className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white"
+      className="relative h-screen min-h-[700px] flex flex-col items-center justify-center text-center text-white p-4"
     >
-      <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
       <div 
         className="absolute inset-0 bg-cover bg-center" 
-        style={{ backgroundImage: "url('https://picsum.photos/seed/luxuryhome/1600/900')" }}
+        style={{ backgroundImage: "url('./assets/chabaud_hd_14.webp')" }}
       ></div>
-      <div className="relative z-20 container mx-auto px-6">
-        <h2 className="text-4xl md:text-6xl font-bold mb-4 leading-tight" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.7)'}}>{t.hero.title}</h2>
-        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)'}}>{t.hero.subtitle}</p>
-        <a 
-          href="#products"
-          className="bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-yellow-500/20"
-        >
-          {t.hero.cta}
-        </a>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60 z-10"></div>
+      
+      <div className="relative z-20 flex flex-col items-center justify-center container mx-auto px-6 h-full">
+        <div className="flex-grow flex flex-col justify-center">
+          <h2 
+            className="text-5xl md:text-5xl font-bold leading-tight" 
+            style={{ textShadow: '3px 3px 12px rgba(0,0,0,0.7)' }}
+          >
+            {t.hero.title}
+          </h2>
+          <p 
+            className="text-3xl md:text-3xl max-w-4xl mx-auto mt-4" 
+            style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}
+          >
+            {t.hero.subtitle}
+          </p>
+        </div>
+
+        <div className="w-full max-w-6xl mt-auto mb-8">
+          <div className="bg-gray-900/60 backdrop-blur-md rounded-xl p-4 md:p-6 shadow-2xl">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-6 gap-x-2">
+              {features.map((feature, index) => {
+                const IconComponent = iconMap[feature.icon];
+                return (
+                  <div key={index} className="flex flex-col items-center gap-2 text-white text-center">
+                    {IconComponent && <IconComponent />}
+                    <span className="text-xs sm:text-sm font-medium">{feature.text}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

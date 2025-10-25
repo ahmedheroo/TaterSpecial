@@ -17,6 +17,7 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
   };
 
   const navLinks = [
+        { href: "#about", text: t.nav.about },
     { href: "#products", text: t.nav.products },
     { href: "#oils", text: t.nav.oils },
     { href: "#contact", text: t.nav.contact },
@@ -25,15 +26,16 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage }) => {
   return (
     <header className="bg-gray-900 bg-opacity-80 backdrop-blur-md sticky top-0 z-50 shadow-lg shadow-yellow-500/10">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-yellow-400 tracking-wider">
-          {t.brand}
-        </h1>
-        <nav className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+        <a href="/" className="flex items-center">
+          <img src="./assets/logo-trans1.png" alt={t.brand} className="h-10 md:h-12 object-contain" />
+        </a>
+        <nav className="hidden md:flex items-center justify-center space-x-8 rtl:space-x-reverse mx-auto" >
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="text-gray-200 hover:text-yellow-400 transition-colors duration-300">
               {link.text}
             </a>
           ))}
+
           <button
             onClick={toggleLanguage}
             className="border border-yellow-400 text-yellow-400 px-4 py-1 rounded-full hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300 font-semibold"

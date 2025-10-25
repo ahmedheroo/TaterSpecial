@@ -12,9 +12,9 @@ const Products: React.FC<ProductsProps> = ({ language }) => {
 
   return (
     <section id="products" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-yellow-400">{t.products.title}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {t.products.items.map((product) => (
             <div key={product.id} className="bg-gray-900 rounded-lg overflow-hidden shadow-xl transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
               <img src={product.image} alt={product.name} className="w-full h-64 object-cover"/>
