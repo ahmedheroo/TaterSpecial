@@ -70,3 +70,36 @@ export const WhatsappIcon: React.FC = () => (
     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.956-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
   </svg>
 );
+export const QuoteIcon: React.FC = () => (
+  <svg className="w-10 h-10 text-[#AEAEAE]/50" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.981 3h-5.981v9.011c0 3.292 2.688 5.989 6 5.989v-3.003c-1.653 0-3-1.343-3-2.997h3v-9.001zm11.019 0h-6v9.011c0 3.292 2.688 5.989 6 5.989v-3.003c-1.653 0-3-1.343-3-2.997h3v-9.001z"/>
+  </svg>
+);
+
+const iconStyle = {
+  width: '4rem',
+  height: '4rem',
+  margin: '0 auto',
+};
+
+export const DiscoverDiffuserIcon: React.FC = () => (
+    <svg style={iconStyle} viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 21H16" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 18C9.23858 18 7 15.3137 7 12V11C7 7.68629 9.23858 5 12 5C14.7614 5 17 7.68629 17 11V12C17 15.3137 14.7614 18 12 18Z" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M10 5C10.5 4 11 3 12 3C13 3 13.5 4 14 5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M11 2C11.25 1.5 11.5 1 12 1C12.5 1 12.75 1.5 13 2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+);
+
+export const OilDropIcon: React.FC = () => (
+  <svg style={iconStyle} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 22C6.477 22 2 17.523 2 12c0-4.17 2.545-7.838 6.197-9.364a1 1 0 011.23.364L12 8l2.573-5.001a1 1 0 011.23-.364C19.455 4.162 22 7.83 22 12c0 5.523-4.477 10-10 10z"></path>
+  </svg>
+);
+
+export const DiscoverSprayIcon: React.FC = () => (
+  <svg style={iconStyle} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8 4h8M6 8h12M17 20H7a2 2 0 01-2-2V9a2 2 0 012-2h10a2 2 0 012 2v9a2 2 0 01-2 2zM14 4V3a1 1 0 00-1-1h-2a1 1 0 00-1 1v1"></path>
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 11v.01M10 15v.01M14 15v.01"></path>
+  </svg>
+);

@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
   const features = language === 'en' ? [...t.hero.features].reverse() : t.hero.features;
 
   return (
-    <section 
+    <section id="home"
       className="relative h-screen min-h-[700px] flex flex-col items-center justify-center text-center text-white p-4"
     >
       <div 
@@ -32,10 +32,9 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60 z-10"></div>
       
       <div className="relative z-20 flex flex-col items-center justify-center container mx-auto px-6 h-full">
-        <div className="flex-grow flex flex-col justify-center">
           <h2 
             className="text-5xl md:text-5xl font-bold leading-tight" 
-            style={{ textShadow: '3px 3px 12px rgba(0,0,0,0.7)' }}
+            style={{ textShadow: '3px 3px 12px rgba(0,0,0,0.7)' ,paddingTop: '160px'}}
           >
             {t.hero.title}
           </h2>
@@ -45,7 +44,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
           >
             {t.hero.subtitle}
           </p>
-        </div>
+ 
 
         <div className="w-full max-w-6xl mt-auto mb-8">
           <div className="bg-gray-900/60 backdrop-blur-md rounded-xl p-4 md:p-6 shadow-2xl">
