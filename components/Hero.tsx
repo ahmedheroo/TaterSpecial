@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
     >
       <div 
         className="absolute inset-0 bg-cover bg-center" 
-        style={{ backgroundImage: "url('./assets/chabaud_hd_14.webp')" }}
+        style={{ backgroundImage: "url('./assets/banner2.png')" }}
       ></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60 z-10"></div>
       
